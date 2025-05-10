@@ -7,16 +7,14 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\WebsiteController;
 use App\Http\Controllers\ReservationController;
 
-Route::get('/', function () {
-    return view('website.homepage');
-});
+
 
 Auth::routes();
 
 
 Route::prefix('dashboard')->middleware('auth')->group(function()
 {
-Route::get('/dashboard',[DashboardController::class, 'Index'])->name('dashboard.index');
+Route::get('/', [DashboardController::class, 'Index'])->name('dashboard.index');
 //المتاحف
 Route::get('/museums',[MuseumController::class, 'Index'])->name('dashboard.museums');
 Route::get('/reservations',[DashboardController::class, 'ShowReservation'])->name('dashboard.reservations');
