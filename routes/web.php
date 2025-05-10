@@ -14,7 +14,7 @@ Auth::routes();
 
 Route::prefix('dashboard')->middleware('auth')->group(function()
 {
-Route::get('/', [DashboardController::class, 'Index'])->name('dashboard.index');
+Route::get('/dashboard', [DashboardController::class, 'Index'])->name('dashboard.index');
 //المتاحف
 Route::get('/museums',[MuseumController::class, 'Index'])->name('dashboard.museums');
 Route::get('/reservations',[DashboardController::class, 'ShowReservation'])->name('dashboard.reservations');
