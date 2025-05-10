@@ -14,7 +14,7 @@ Auth::routes();
 
 Route::prefix('dashboard')->middleware('auth')->group(function()
 {
-Route::get('/', [DashboardController::class, 'Index'])->name('dashboard.index');
+Route::get('/dash', [DashboardController::class, 'Index'])->name('dashboard.index');
 //المتاحف
 Route::get('/museums',[MuseumController::class, 'Index'])->name('dashboard.museums');
 Route::get('/reservations',[DashboardController::class, 'ShowReservation'])->name('dashboard.reservations');
@@ -32,8 +32,7 @@ Route::get('/users/delete/{id}', [UsersController::class, 'destroy'])->name('das
 });
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/',[WebsiteController::class, 'Index'])->name('website.homepage');
+Route::get('/homepage',[WebsiteController::class, 'Index'])->name('website.homepage');
 Route::get('/museumslist',[WebsiteController::class, 'ShowMuseums'])->name('website.museums');
 Route::get('/about',[WebsiteController::class, 'About'])->name('website.about');
 Route::get('/contact',[WebsiteController::class, 'Contact'])->name('website.contact');
