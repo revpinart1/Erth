@@ -11,6 +11,9 @@ use App\Http\Controllers\ReservationController;
 
 Auth::routes();
 
+Route::get('/home', function () {
+    return redirect('/');
+}); 
 
 Route::prefix('dashboard')->middleware('auth')->group(function()
 {
