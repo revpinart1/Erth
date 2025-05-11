@@ -32,7 +32,7 @@ Route::get('/users/delete/{id}', [UsersController::class, 'destroy'])->name('das
 });
 
 
-Route::get('/',[WebsiteController::class, 'HomePage'])->name('website.homepage');
+Route::get('/',[WebsiteController::class, 'WebsiteIndex'])->name('website.homepage');
 Route::get('/museumslist',[WebsiteController::class, 'ShowMuseums'])->name('website.museums');
 Route::get('/about',[WebsiteController::class, 'About'])->name('website.about');
 Route::get('/contact',[WebsiteController::class, 'Contact'])->name('website.contact');
