@@ -11,7 +11,7 @@ use Illuminate\support\facades\Storage;
 
 class MuseumController extends Controller
 {
-  public function HomePage(){
+  public function MuseumsIndex(){
 $regions=Regions::All();
 $museums=Museums::with('Region')->get();
 return view('dashboard.museums', ['regions' => $regions, 'museums' => $museums]);
