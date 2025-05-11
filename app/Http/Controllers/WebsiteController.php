@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Museums;
-use Illuminate\support\facades\DB;
+use Illuminate\Support\Facades\DB;
 
 class WebsiteController extends Controller
 {
