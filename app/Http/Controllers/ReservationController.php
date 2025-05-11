@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Museums;
 use App\Models\Reservation;
 use App\Models\User;
-use Illuminate\support\facades\DB;
-use Illuminate\support\facades\Storage;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class ReservationController extends Controller
 {
