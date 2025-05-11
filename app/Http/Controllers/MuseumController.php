@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Regions;
 use App\Models\Museums;
-use Illuminate\support\facades\DB;
-use Illuminate\support\facades\Storage;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 
 class MuseumController extends Controller
