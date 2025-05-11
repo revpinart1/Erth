@@ -16,7 +16,7 @@ Route::prefix('dashboard')->middleware('auth')->group(function()
 {
 Route::get('/dashboard', [DashboardController::class, 'HomePage'])->name('dashboard.index');
 //المتاحف
-Route::get('/museums',[MuseumController::class, 'HomePage'])->name('dashboard.museums');
+Route::get('/museums',[MuseumController::class, 'MuseumsIndex'])->name('dashboard.museums');
 Route::get('/reservations',[DashboardController::class, 'ShowReservation'])->name('dashboard.reservations');
 Route::post('/createregions', [MuseumController::class,'CreateRegions'])->name('dashboard.createregions');
 Route::post('/createmuseums', [MuseumController::class,'MuseumCreate'])->name('dashboard.createmuseums');
