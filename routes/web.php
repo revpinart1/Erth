@@ -24,7 +24,7 @@ Route::get('/editmuseums/{id}', [MuseumController::class,'EditMuseum'])->name('d
 Route::post('/updatemuseums/{id}', [MuseumController::class,'UpdateMuseum'])->name('dashboard.updatemuseums');
 Route::get('/deletemuseums/{id}', [MuseumController::class,'DeleteMuseum'])->name('dashboard.deletemuseums');
 //اليوزرز
-Route::get('/users',[UsersController::class, 'HomePage'])->name('dashboard.users');
+Route::get('/users',[UsersController::class, 'UsersIndex'])->name('dashboard.users');
 Route::get('/users/edit/{id}', [UsersController::class, 'edit'])->name('dashboard.users.edit');
 Route::post('/users/update/{id}', [UsersController::class, 'update'])->name('dashboard.users.update');
 Route::get('/users/delete/{id}', [UsersController::class, 'destroy'])->name('dashboard.users.delete');
