@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 class UsersController extends Controller
 {
     // عرض جميع المستخدمين
-    public function Index()
+    public function UsersIndex()
     {
         $users = User::all(); 
         return view('dashboard.users', compact('users'));
