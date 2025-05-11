@@ -7,8 +7,8 @@ use App\Models\Museums;
 use App\Models\User;
 use App\Models\Reservation;
 
-use Illuminate\support\facades\DB;
-use Illuminate\support\facades\Storage;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class DashboardController extends Controller
 {
@@ -17,7 +17,7 @@ class DashboardController extends Controller
         $Museumscount = DB::table('museums')->count();
         $reservationcount = DB::table('reservations')->count();
         //عدد المستخدمين
-        $Userscount = DB::table('Users')->count();
+        $Userscount = DB::table('users')->count();
         $reservations=Reservation::with('user', 'museums')->get();
 
         return view('dashboard.index',compact('Museumscount','Userscount','reservationcount','reservations'));
